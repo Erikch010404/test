@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Registration</title>
+	<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+	<div class="container">
+		<h1>Registration Form</h1>
+		<form id="registrationForm" novalidate>
+			<div class="field">
+				<label for="firstName">First Name<span>*</span></label>
+				<input type="text" id="firstName" name="firstName" required />
+				<p class="error" data-error-for="firstName"></p>
+			</div>
+
+			<div class="field">
+				<label for="lastName">Last Name<span>*</span></label>
+				<input type="text" id="lastName" name="lastName" required />
+				<p class="error" data-error-for="lastName"></p>
+			</div>
+
+			<div class="field">
+				<label for="email">Email<span>*</span></label>
+				<input type="email" id="email" name="email" required />
+				<p class="error" data-error-for="email"></p>
+			</div>
+
+			<div class="field">
+				<label for="phone">Phone</label>
+				<input type="tel" id="phone" name="phone"/>
+				<p class="error" data-error-for="phone"></p>
+			</div>
+
+			<div class="field">
+				<label for="description">Description</label>
+				<textarea id="description" name="description" rows="4"></textarea>
+			</div>
+
+			<button type="submit" id="submitBtn">Register</button>
+			<p id="status" role="status" aria-live="polite"></p>
+		</form>
+
+		<section class="list">
+			<h2>Recent Registrations</h2>
+			<ul id="registrations"></ul>
+		</section>
+	</div>
+
+	<script src="/main.js"></script>
+</body>
+</html>
+
+
